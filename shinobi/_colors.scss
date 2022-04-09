@@ -1,0 +1,30 @@
+// a loop for generate text-color & bg-color classes that use $colors for its loop
+@each $key, $val in $colors { //key and value in $colors map
+    .text-#{$key} {
+        color: $val;
+    }
+    // bg: background color
+    .bg-#{$key}{
+        background-color: $val;
+    }
+
+    // light variations
+    @for $i from 1 through 9 {
+        .text-#{$key}-light-#{$i} {
+            color: mix(white, $val, $i * 10); // it mixes colors together with percantage of $i
+        }
+        .bg-#{$key}-light-#{$i} {
+            background-color: mix(white, $val, $i * 10); // it mixes colors together with percantage of $i
+        }
+        
+        // dark variations
+        @for $i from 1 through 9 {
+            .text-#{$key}-dark-#{$i} {
+                color: mix(black, $val, $i * 10); // it mixes colors together with percantage of $i
+            }
+        }
+        .bg-#{$key}-dark-#{$i} {
+            background-color: mix(black, $val, $i * 10); // it mixes colors together with percantage of $i
+        }
+    }
+    }
