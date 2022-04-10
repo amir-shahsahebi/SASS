@@ -1,5 +1,6 @@
 //order is matter even for imports 
 // variables & functions
+@import "functions";
 @import "variables";
 
 // base & layout
@@ -13,4 +14,5 @@
 @import 'components/button';
 
 // utilities (margin, padding, opacity)
-
+@import "utilities";
+ 
