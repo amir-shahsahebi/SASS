@@ -8,7 +8,7 @@
         background-color: $val;
     }
     .text-hover-#{$key}{
-        &:hover { //"&:" ===> refers to parents of above class
+        &:hover { //"&:" ===> refers to parents of above class(one line above :) )
             color: $val
         }
         // &:last-child {
